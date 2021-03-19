@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var p = new Promise((resolve, reject) => {
+
+            var x = 2;
+
+            if(x === 2) {
+                resolve("Success");
+            }
+            else {
+                reject("Sorry");
+            }
+        });
+            
+       // 'then' for resolved 'catch' for rejected
+        p.then(successHandler).catch(errorHandler);
+   
+        function successHandler(result) {
+            console.log("Handling success!, ", result);
+        }
+        function errorHandler(err) {
+           console.log("Handling not sucess!, ", err);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class league {
+
+            constructor (teamName, captainName) {
+                this.teamNameName = teamName;
+                this.captainName = captainName;
+            }
+
+            set newCap(newCaptain) {    //setter must have exactly one parameter
+                this.captainName = newCaptain;
+            }
+        }
+
+        var PSL = new league("KINGS", "Imad Wasim");
+        PSL.newCap = "Babar Azam";      //with 'set' ---> no need for parentheses
+        console.log(PSL.captainName);
+    </script>
+    
+</body>
+</html>

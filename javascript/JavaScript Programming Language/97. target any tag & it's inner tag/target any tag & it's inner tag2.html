@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x { border-spacing: 50px; }
+        .y { padding: 20px; color: white; }
+    </style>
+</head>
+<body>
+
+    <table id="t" onclick="xyz();">
+        <tr>
+            <td id="a" onclick="A();">red</td> <td id="b" onclick="B();">blue</td>
+        </tr>
+        <tr>
+            <td id="c" onclick="C();">green</td> <td id="d" onclick="D();">orange</td>
+        </tr>
+    </table>
+
+    <script>
+        function xyz() { document.getElementById("t").className = "x"; }
+
+        function A() {
+            document.getElementById("a").style.backgroundColor = "red";
+            document.getElementById("a").className = "y";
+        }
+        function B() {
+            document.getElementById("b").style.backgroundColor = "blue";
+            document.getElementById("b").className = "y";
+        }
+        function C() {
+            document.getElementById("c").style.backgroundColor = "green";
+            document.getElementById("c").className = "y";
+        }
+        function D() {
+            document.getElementById("d").style.backgroundColor = "orange";
+            document.getElementById("d").className = "y";
+        }
+    </script>
+    
+</body>
+</html>

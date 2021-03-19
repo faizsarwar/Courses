@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x"> This is a div element </div>    
+    <button onclick="myFunction()"> Try it </button>
+    <p id="p"></p>
+
+    <script>
+        function myFunction() {
+
+           var x = document.getElementById("x");             /* nodeValue sirf childNode se access hoti hai islye NULL ayega*/
+
+           var txt = "";
+           txt += "The node name  : " + x.nodeName  + "<br>";/*In the example above, if the node is an element, the nodeName will return the Capital name*/
+           txt += "The node value : " + x.nodeValue + "<br>";/*In the example above, if the node is an element, the nodeValue will return the null*/
+           txt += "The node type  : " + x.nodeType;          /*In the example above, if the node is an element, the nodeType will return the number 1*/
+
+           document.getElementById("p").innerHTML = txt;
+        }
+    </script>
+    
+</body>
+</html>

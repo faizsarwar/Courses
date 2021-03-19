@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="tomb1.jpg" onmouseover="swapImg(id, 'tomb2.jpg');" height="315" width="455" id="x"/>
+
+    <script>
+        function swapImg(id, nextPic) {
+
+            var pic = document.getElementById(id); 
+            pic.src = nextPic;
+        }
+    </script>
+    
+</body>
+</html>

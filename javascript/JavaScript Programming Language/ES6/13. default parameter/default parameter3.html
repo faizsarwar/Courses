@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function B(x = z + 3, y = z + x) {
+            console.log(x, y);
+        }
+    
+        var z = 5;
+        B();              // 8 13
+        B(6);             // 6 11
+        z = 6;
+        B(undefined, 10); // 9 10
+        // (agar koi parameter shuru ya beech mein skip karna ho tw undefined likh denge)
+    </script>
+    
+</body>
+</html>

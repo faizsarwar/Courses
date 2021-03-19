@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var x;           // **GLOBAL variable**
+        var y;           // **GLOBAL variable**
+        function Value() {
+            var x = 2;   // **LOCAL variable**
+            y = x;       // assigning LOCAL variable to GLOBAL variable
+        }
+
+        alert(x);
+        alert(y);
+
+        Value();
+        alert(x);
+        alert(y);
+    </script>
+
+</body>
+</html>

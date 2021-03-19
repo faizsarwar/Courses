@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var rightNow = new Date();     // called a 'Date' object.
+        alert(rightNow);
+
+        // JavaScript gets this information from the user's computer. It
+        // is only as accurate as the computer's date and time settings.
+        
+        // The Date object may resemble a string, but it isn't one.
+        // For example, you can't use methods on it like charAt , indexOf , or slice .
+        
+        // If you need the Date object to be a string, you can convert it.
+        var dateString = (new Date()).toString();
+        alert(dateString);
+    </script>
+    
+</body>
+</html>

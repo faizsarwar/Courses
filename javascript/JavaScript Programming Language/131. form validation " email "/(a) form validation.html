@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checking();">
+        please enter your email : <input type="email" id="x">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checking() {
+
+            var spaceOf = document.getElementById("x").value.indexOf(" ");
+            if(spaceOf !== -1) {
+            //  test whether the space exist in the address
+                alert("please enter your email correctly!");
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

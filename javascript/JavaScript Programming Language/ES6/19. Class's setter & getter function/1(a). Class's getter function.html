@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class league {
+
+            constructor (teamName, captainName) {
+                this.teamName = teamName;
+                this.captainName = captainName;
+            }
+
+            details() {
+                return `team is ${this.teamName} & captain is ${this.captainName}`;//'this' is must
+            }
+
+            get detail() {
+                return `team is ${this.teamName} & captain is ${this.captainName}`;//'this' is must
+            }
+        }
+
+        var PSL = new league("KINGS", "Imad Wasim");
+        console.log(PSL.details());   //without 'get' ---> need for parentheses
+        console.log(PSL.detail);      //with    'get' ---> no need for parentheses
+    </script>
+    
+</body>
+</html>

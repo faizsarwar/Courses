@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="CSS.css" rel="stylesheet">
+</head>
+<body>
+
+    <p id="a" onclick="makeBig();">   Alhamdullilah for everything..!!! </p>
+    <p id="b" onclick="setMargin();"> Alhamdullilah for everything..!!! </p>
+    <img src="tomb1.jpg" onclick="floatImg();"    height="315" width="455" id="c"> <br>
+    <img src="tomb2.jpg" onclick="makeVisible();" height="315" width="455" id="d">
+    
+    <script>
+        function makeBig() {
+            document.getElementById("a").className = "big";
+        }
+
+        function setMargin() {
+            document.getElementById("b").className = "margin";
+        }
+
+        function floatImg() {
+            document.getElementById("c").className = "float";
+        }
+
+        function makeVisible() {
+            document.getElementById("d").className = "hidden";
+        }
+    </script>
+    
+</body>
+</html>

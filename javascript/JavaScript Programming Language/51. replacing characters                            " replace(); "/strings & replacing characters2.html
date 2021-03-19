@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // GLOBAL Replace ( / /g )
+        // If you want to replace all instances, JavaScript know that you want a global replace.
+       
+        var text = "Okay Bye, World War II. Ok Thanks, World War II. Oh Pleasure, World War II.";
+     // text = text.replace("World War II", "the Second World War");
+ /*OR*/ text = text.replace(/World War II/, "the Second World War");
+        alert(text);  // The segment to be inserted is enclosed by quotation marks or slashes, as in a one-time replace.
+
+        var text = "Okay Bye, World War II. Ok Thanks, World War II. Oh Pleasure, World War II.";
+        text = text.replace(/World War II/g, "the Second World War");
+        alert(text);  // The segment to be insertedis enclosed by slashes with 'g', as in a all-time replace.
+    </script>
+    
+</body>
+</html>

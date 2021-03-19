@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class Counter {
+            #x = 0;
+            increment() {
+              this.#x++;
+            }
+            decrement() {
+              this.#x--;
+            }
+            getNum(){
+              return this.#x;
+            }
+        }
+
+        const c = new Counter();
+        c.increment();               //private varaibles can be accessible through method outside of class
+        c.increment();               //private varaibles can be accessible through method outside of class
+        c.decrement();               //private varaibles can be accessible through method outside of class
+        console.log(c.getNum());     //private varaibles can be accessible through method outside of class
+    </script>
+    
+</body>
+</html>

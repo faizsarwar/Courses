@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+       <p>            My first  name is Muhammad </p>
+       <p>            My second name is Ali      </p>
+       <p>            My third  name is Sarwar   </p>
+       <p id="empty">                            </p>
+    </div>
+
+    <script>
+        document.getElementById("empty").innerHTML = "Alhamdullilah for everything..!!";                                     
+        //No 'document.getElementById("x").getElementById("empty")' because it
+        //can assemble a collection of all of paragraphs (direct id se pakarlo)
+
+        for(var i = 0; i < document.getElementById("x").getElementsByTagName("p").length; i++) {
+           document.getElementById("x").getElementsByTagName("p")[i].style.backgroundColor = "yellow"; 
+        }    
+    </script>
+    
+</body>
+</html>

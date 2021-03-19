@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var names1 = ["Ali", "Faiz", "Salman"];
+        var names2 = ["Ayesha", "Ayesha"];
+     
+        //without spread operator    (Combining Arrays)
+        var names = names1.concat(names2);
+
+        //with spread operator       (Combining Arrays)
+        var names = [...names1, ...names2];
+
+        //OR
+        var names = names1.push(...names2);    //expand ho kar gaya
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    //  You can specify a URL parameter without a name parameter, but you can't specify a window
+    //  name parameter without a URL parameter, But it is okay to specify an empty URL parameter
+        var myURL = window.open("", "googlepage");
+    //---------------------------------------------------------------------------------------------------
+
+    //  window that's smaller than the screen will display in the upper-left corner of
+    //  the screen. But you can optionally tell the browser where to place the window
+        var myURL = window.open("page.html", "googlepage", "width=420,height=380,left=200,top=100");
+    //---------------------------------------------------------------------------------------------------
+
+        alert(myURL);
+   </script>
+    
+</body>
+</html>

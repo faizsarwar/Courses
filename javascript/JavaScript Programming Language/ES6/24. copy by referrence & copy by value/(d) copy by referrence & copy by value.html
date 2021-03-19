@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var obj1 = {
+
+            namee: "Ali", agee: 20, genderr: "male"
+        };
+        
+        console.log(Object.keys(obj1).length);   //3
+        var obj2 = {...obj1};   //copy by value  //with spread operator    (Copy Object)
+        console.log(Object.keys(obj2).length);   //3
+
+        obj1.bio = "Software Engineer";
+        console.log(Object.keys(obj1).length);   //4
+        console.log(Object.keys(obj2).length);   //3
+
+        obj2.for = "Web Developer";
+        console.log(Object.keys(obj1).length);   //4
+        console.log(Object.keys(obj2).length);   //4
+    </script>
+    
+</body>
+</html>

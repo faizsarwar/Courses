@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class league {
+
+            constructor (teamName, captainName) {
+                this.teamNameName = teamName;
+                this.captainName = captainName;
+            }
+
+            static set newCap(newCaptain) {
+                this.captainName = newCaptain;
+            }
+        }
+
+        var PSL = new league("KINGS", "Imad Wasim");
+        league.newCap = "Babar Azam";
+        console.log(PSL.captainName);
+    </script>
+    
+</body>
+</html>

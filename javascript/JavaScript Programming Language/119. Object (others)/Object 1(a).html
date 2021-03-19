@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var obj1 = {
+
+            name : "Ali"     // property as a variable likh sakte hain
+        };
+        console.log(obj1.name);    // or access bh kar sakte hain
+        console.log(obj1['name']); // or access bh kar sakte hain
+
+        var obj2 = {
+
+           'name' : "Sarwar" // property ko '' mein likh sakte hain
+        };
+        console.log(obj2.name);    // or access bh kar sakte hain
+        console.log(obj2['name']); // or access bh kar sakte hain
+
+        var obj3 = {
+        
+            2 : "Muhammad"   // property ko as number likh sakte hain
+        };
+    //  console.log(obj3.2);      // or access bh kar nahi sakte
+        console.log(obj3['2']);   // or access bh kar sakte hain
+    </script>
+    
+</body>
+</html>

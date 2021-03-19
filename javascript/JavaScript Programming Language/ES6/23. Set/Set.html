@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var example = new Set([1, 1, 6, 6, 8, 8, 8,]);
+        console.log(example);
+
+        //size
+        console.log(example.size);   //3
+
+        //add
+        example.add(5);
+        console.log(example.size);   //4
+        example.add(5).add(5).add(5);           // can add multiple
+        console.log(example.size);   //4
+
+        //delete                                // delete() returns boolean
+        console.log(example.delete(6));         //true
+        console.log(example.size);   //3
+        console.log(example.delete(99));        //false
+        console.log(example.size);   //3
+ 
+        //to check Set have?                    // has() returns boolean
+        console.log(example.has(5));            //true
+        console.log(example.has(99));           //false
+
+        //clear
+        example.clear();                        // clear() empty it
+        console.log(example.size);   //0
+        
+        console.log(example);
+    </script>
+    
+</body>
+</html>

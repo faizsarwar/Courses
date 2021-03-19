@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // parseInt converts all strings, including strings comprising floating-point numbers, to integers
+        
+        // when STRING
+        alert(parseInt("2"));
+        // when FLOAT
+        alert(parseInt(2.9));              // It doesn't round. It simply lops off the decimals.
+        // when STRING having FLOAT
+        alert(parseInt("2.9"));            // It simply lops off decimals.
+        // when STRING start with number
+        alert(parseInt("2.9ali"));         // It simply lops off decimals & others.
+    </script>
+    
+</body>
+</html>

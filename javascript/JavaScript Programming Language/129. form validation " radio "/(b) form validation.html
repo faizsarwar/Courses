@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checking(id);" id="x">
+        <input type="radio" name="x"> Ali
+        <input type="radio" name="x"> Faiz
+        <input type="radio" name="x"> Salman
+
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checking(myID) {
+            var form = document.getElementById("x");
+            var radios = form.getElementsByTagName("input");
+
+            for(var i = 0; i < radios.length ; i++) {
+                if(radios[i].checked) {
+                    return true;
+                }
+            }
+            
+            alert("please check one!");
+            return false;
+        }
+    </script>
+    
+</body>
+</html>

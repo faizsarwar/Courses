@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class myClass {
+            
+            #x = 100;              //add private variables to classes, just by using the #sign
+            static #y = 100;
+        }
+
+        var obj = new myClass();
+        console.log(obj.x);        //undefined
+        console.log(myClass.y);    //undefined
+    </script>
+    
+</body>
+</html>

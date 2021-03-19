@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="x"></p>
+    <p id="y"></p>
+    <p id="z"> </p> <!--space considers as a text in a node--> 
+
+    <script>
+        var p1 = document.getElementById("x");
+        var p2 = document.getElementById("y");
+        var p3 = document.getElementById("z");
+      
+        if(p1.nodeName === "P") {                /* name is usually given in all-caps */
+
+            p1.innerHTML = "Alhamdullilah for everything";
+        }
+        if(p2.nodeName.toLowerCase() === "p") {  /* its good practice to standardize the
+                                                    case when you're testing for names */
+            p2.innerHTML = "Alhamdullilah for everything";
+        }
+        if(p3.firstChild.nodeName === "#text") { /* if the node is a text node, the name
+                                                    of node is always #text in lower-case*/
+            p3.innerHTML = "Alhamdullilah for everything";
+        }
+    </script>
+
+</body>
+</html>

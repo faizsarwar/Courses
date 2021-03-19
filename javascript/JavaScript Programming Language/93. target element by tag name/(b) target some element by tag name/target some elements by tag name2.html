@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul>
+        <li> My first  name is Muhammad </li>
+        <li> My Second name is Ali      </li>
+        <li> My Third  name is Sarwar   </li>
+        <li> </li>
+        <li> </li>
+    </ul>
+
+    <script>
+        var lis = document.getElementsByTagName("li");
+
+        for(var i = 0; i < lis.length - 2; i++) {
+           lis[i].style.color = "red";
+           lis[i].style.fontFamily = "monospace";
+           lis[i].style.wordSpacing = "10px";
+        }
+//OR    'lis' OR 'document.getElementsByTagName("li")'
+    </script>
+    
+</body>
+</html>

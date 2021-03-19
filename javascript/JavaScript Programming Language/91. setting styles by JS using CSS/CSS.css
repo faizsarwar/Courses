@@ -1,0 +1,12 @@
+.big {
+    font-size: 40px;
+}
+.margin {
+    margin-left: 100px;
+}
+.float {
+    float: right;
+}
+.hidden {
+    visibility: hidden;
+}

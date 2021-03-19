@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="xyz();"> reload a document </button>
+
+    <script>
+        function xyz() {
+        //  reloads the current document
+            window.location.reload();      // reloads the current page from the cache
+            window.location.reload(false); // reloads the current page from the cache
+            window.location.reload(true);  // reloads the current page from the server
+        }
+    </script>
+    
+</body>
+</html>

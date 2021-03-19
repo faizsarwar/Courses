@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+                            <!--In order for the submission to be called off, there has to be a
+                                matching keyword 'return' in the markup that calls the function-->
+    <form onsubmit="return checkForName();">
+        plase enter your name: <br>
+        <input type="text" id="x">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checkForName() {
+
+            if(document.getElementById("x").value.length === 0) {
+          //OR document.getElementById("name").value === "" (for string only)
+                alert("please enter name!");
+                return false; // prevents the form from being submitted
+            }
+        }
+    </script>
+    
+</body>
+</html>

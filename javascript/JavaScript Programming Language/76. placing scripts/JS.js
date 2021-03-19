@@ -1,0 +1,1 @@
+document.write("seperate JS file");

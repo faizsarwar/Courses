@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class PSL {
+
+            constructor (teamName, captainName) {
+                this.teamName = teamName;
+                this.captainName = captainName;
+            }
+
+            static legend(x = "Babar Azam") {
+                return `top performer is ${x}`;
+            }
+
+            set newCap(newCaptain) {
+                this.captainName = newCaptain;
+            }
+
+            get details() {
+                return `team is ${this.teamName} & captain is ${this.captainName}`;
+            }
+        }
+
+        class league extends PSL {
+
+            constructor (teamName, captainName, countryName) {
+                super(teamName, captainName);
+                this.countryName = countryName;
+            }
+        }
+
+        var l = new league("KINGS", "Imad Wasim", "Pakistan");
+        console.log(l.details);
+        console.log(league.legend());
+        l.newCap = "Babar Azam";
+        console.log(l.details);
+        console.log(l.countryName);
+    </script>
+    
+</body>
+</html>

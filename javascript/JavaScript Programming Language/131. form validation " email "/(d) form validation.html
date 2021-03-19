@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checking();">
+        please enter your email : <input type="email" id="x">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checking() {
+            
+            var dot       = document.getElementById("x").value.indexOf(".");
+            var adtheRate = document.getElementById("x").value.indexOf("@");
+            if (dot - adtheRate < 2) {
+            //  tests whether that one character (or more) is missing
+                alert("please enter your email correctly!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

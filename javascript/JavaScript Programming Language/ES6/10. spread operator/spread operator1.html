@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var names1 = ["Salman", "Ayesha"];
+  
+        //without spread operator   (not put Array in Array)
+        var names = ["Ali", "Faiz", names1, "Aamna"];
+        console.log(names);     // ["Ali", "Faiz", ["Salman", "Ayesha"], "Aamna"]
+        console.log(names[2]);  // ["Salman", "Ayesha"]
+
+        //with spread operator      (yes put Array in Array)
+        var names = ["Ali", "Faiz", ...names1, "Aamna"];
+        console.log(names);     // ["Ali", "Faiz", "Salman", "Ayesha", "Aamna"]
+        console.log(names[2]);  // Salman
+    </script>
+    
+</body>
+</html>

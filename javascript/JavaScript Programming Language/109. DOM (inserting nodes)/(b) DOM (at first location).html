@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+        <p> abcd </p><p> abcd </p><p> abcd </p><p> abcd </p><p> abcd </p><p> abcd </p>
+        <!--Whitespace inside elements is considered as text, and text is considered as nodes-->
+    </div>
+
+    <script>
+        var div = document.getElementById("x");
+
+        var newP = document.createElement("p");
+        var newText = document.createTextNode("My name is ALI");
+        newP.appendChild(newText);
+
+// suppose you want the paragraph to be the first one in the
+// div, rather than the last. The solution is 'insertBefore'
+        var para1 = div.firstChild;
+        div.insertBefore(newP, para1);
+    </script>
+    
+</body>
+</html>

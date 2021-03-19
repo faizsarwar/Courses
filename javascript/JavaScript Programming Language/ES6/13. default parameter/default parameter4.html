@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>           
+        function add(numArray = []) {    
+            var total = 0;
+            numArray.forEach(x => { total += x; } );
+            console.log(total);
+        }
+        add();
+        
+        //OR
+
+        function addd(numArray = []) {
+            var total = numArray.reduce((sum, num)  => (sum + num), 0);
+            console.log(total);
+        }
+        addd();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var names = ["Ali", "Aamna"];
+        alert(names);
+        
+        // splice method use to insert one or more elements anywhere in an array,
+        // while, optionally removing one or more elements that come after it.
+
+        names.splice(1, 0, "Faiz");             // 1 index pe "Faiz" ko add karo or 0 elements remove karna hai
+        alert(names);                           // or sirf ek add hua tow ek ek agay index hojayegi
+
+        names.splice(2, 0, "Salman", "Ayesha"); // 2 index pe "Salman", "Ayesha" ko add karo or 0 elements remove karna hai
+        alert(names);                           // or 2 add hua tow 2 2 agay index hojayegi
+
+        names.splice(1, 4, "elder");            // 1 index pe "elder" ko add karo or 4 remove elements remove karne hain
+        alert(names);                           // or aagay nahi barhayga qk add nahi hua
+
+        names.splice(0, 2);                     // can also remove elements without adding any element
+        alert(names);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x { border-spacing: 50px; }
+        .y { padding: 20px; color: white; }
+    </style>
+</head>
+<body>
+
+    <table id="t" onclick="xyz();">
+        <tr>
+            <td onclick="A();">red</td> <td onclick="B();">blue</td>
+        </tr>
+        <tr>
+            <td onclick="C();">green</td> <td onclick="D();">orange</td>
+        </tr>
+    </table>
+
+    <script>
+        var tble = document.getElementById("t");
+        var cell = tble.getElementsByTagName("td");
+
+        function xyz() { tble.className = "x"; }
+
+        function A() {
+            cell[0].style.backgroundColor = "red";
+            cell[0].className = "y";
+        }
+        function B() {
+            cell[1].style.backgroundColor = "blue";
+            cell[1].className = "y";
+        }
+        function C() {
+            cell[2].style.backgroundColor = "green";
+            cell[2].className = "y";
+        }
+        function D() {
+            cell[3].style.backgroundColor = "orange";
+            cell[3].className = "y";
+        }
+    </script>
+    
+</body>
+</html>

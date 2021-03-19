@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var firstname = ["Muhammad"];
+        var secondname = ["Ali", "Faiz", "Salman", "Ayesha", "Aamna"];
+        var lastname = ["Sarwar"];
+
+        for(var i = 0; i < firstname.length; i++) {
+            for(var j = 0; j < secondname.length; j++) {
+                for(var k = 0; k < lastname.length; k++) {
+
+                    if(secondname[j] === "Ali" || secondname[j] === "Faiz" || secondname[j] === "Salman") {
+                    
+                        document.write("name is : " + firstname[i] + " " + secondname[j] + " " + lastname[k]);
+                    }
+                    else if (secondname[j] === "Ayesha" || secondname[j] === "Aamna") {
+                    
+                        document.write("name is : " + secondname[j] + " " + lastname[k]);     
+                    }
+                
+                    document.write("<br>");
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

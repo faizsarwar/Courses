@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // charCodeAt() method is used to find out the Unicode
+        // value of a character at the specific index in a string
+        
+        //-------------------------------------------------------
+
+        var message = "I am ALI & I like JAVASCRIPT";
+
+        // Here, we will print the Unicode value of a character by passing its specific index.
+        alert(message.charCodeAt(2));
+
+        // Here, we will not pass any index number with the method. In such case, it will return the Unicode value of first character.
+        alert(message.charCodeAt());
+
+        // Here, we will print the Unicode value of last character in a string.
+        alert(message.charCodeAt(message.length - 1));
+
+        // Here, we will provide the index number greater than the length of the string. In such case, the method returns NaN.
+        alert(message.charCodeAt(2000));
+    </script>
+    
+</body>
+</html>

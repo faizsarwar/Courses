@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="abc();"> go 3 pages forward </button>
+    <button onclick="xyz();"> go 3 pages back    </button>
+
+    <script>
+        // go() method loads a specific URL from the history list
+        //     | you can tell the browser how many steps in the
+        //     | history you want to take, using negative numbers
+        //     | to go back and positive numbers to go forward
+
+        function abc() {
+            window.history.go(3);
+        }
+        function xyz() {
+            window.history.go(-3);
+        }
+    </script>
+    
+</body>
+</html>

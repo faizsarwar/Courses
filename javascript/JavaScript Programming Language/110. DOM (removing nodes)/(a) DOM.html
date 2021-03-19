@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <p> a </p><p> b </p><p id="x"> c </p><p> d </p><p> e </p>
+        <!--Whitespace inside elements is considered as text, and text is considered as nodes-->
+    </div>
+
+    <script>
+//      To remove a node directly, use 'remove()'
+        document.getElementById("x").remove();
+    </script>
+    
+</body>
+</html>

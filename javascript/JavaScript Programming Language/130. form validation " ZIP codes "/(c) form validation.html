@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checking();">
+        please enter your ZIP: <input type="text" id="zip">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checking() {
+
+            if(document.getElementById("zip").value.length === 0) {
+                alert("please enter a ZIP!");
+                return false;
+            }
+
+            if(document.getElementById("zip").value.length < 5 || document.getElementById("zip").value.length > 5) {
+                alert("please enter a 5-digit ZIP!");
+                return false;
+            }
+
+            for(var i = 0; i < 5; i++) {
+            //  make sure that all the characters are string characters representing numbers
+            //  if number        okay  ex.  3
+            //  if string number okay  ex. "3"
+            //  if string        NaN   ex. "e"
+                if(isNaN(parseInt(document.getElementById("zip").value[i]))) {
+                    alert("please enter only numbers!");
+                    return false;
+                }
+            }
+        }
+    </script>
+    
+</body>
+</html>

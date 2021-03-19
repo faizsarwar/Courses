@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+       <p> My first  name is Muhammad </p>
+       <p> My second name is Ali      </p>
+       <p> My third  name is Sarwar   </p>
+    </div>
+
+    <script>
+        var div = document.getElementById("x");
+
+        var pCounter = 0;
+        for (var i = 0; i < div.childNodes.length; i++) {
+            if (div.childNodes[i].nodeType === 1) {
+                pCounter++;
+            }         
+            if (pCounter === 2) {            
+                div.childNodes[i].innerHTML = "Alhamdullilah for everything";
+                break;         
+            }
+        }
+//OR
+//  document.getElementsByTagName("p")[1].innerHTML = "Alhamdullilah for everything";
+//  (document.getElementById("x")).getElementsByTagName("p")[1].innerHTML = "Alhamdullilah for everything";
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        class league {
+
+            constructor (teamName, captainName) {
+                this.teamName = teamName;
+                this.captainName = captainName;
+            }
+
+            static details() {       //'static' with 'this' error can't use
+                return `team is ${this.teamName} & captain is ${this.captainName}`;
+            }
+
+            static get detail() {    //'static' with 'this' error can't use
+                return `team is ${this.teamName} & captain is ${this.captainName}`;
+            }
+        }
+
+        var PSL = new league("KINGS", "Imad Wasim");
+        console.log(league.details());
+        console.log(league.detail);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="x" class="email" placeholder="enter your email" title="emailBox">
+    
+    <script>
+//      can make a collection of all the attributes of an element, with a statement
+        var inputAttributes = document.getElementById("x").attributes;
+//      using array-like notation, can find out the name of any attribute in the collection
+        var thatAttribute = inputAttributes[3].nodeName;
+//OR----------------------------------------------------document.getElementById("x").attributes[3].nodeName;
+                                                  alert(document.getElementById("x").attributes[3].nodeName);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        alert(Math.round(1.4)); // .5 se pehle tw pehle ( 1 ) 
+        alert(Math.round(1.5)); // .5 ya .5 se aagay tw agay ( 2 )
+        alert(Math.round(1.6)); // ( 2 )
+
+        alert(Math.round(1.5)); // ( 2 )
+        alert(Math.round(0.6)); // ( 1 )
+        alert(Math.round(0.2)); // ( 0 )
+
+    // .0 to .4 = pehle & .5 to .9 = agay (+ve)
+    //---------------------------------------------------------------
+    // .0 to .5 = pehle & .6 to .9 = agay (-ve)
+
+        alert(Math.round(-1.4)); // .5 or .5 se pehle tw pehle ( -1 ) 
+        alert(Math.round(-1.5)); // ( -1 )
+        alert(Math.round(-1.6)); // .5 se agay tw agay (ex: -2)
+
+        alert(Math.round(-1.5)); // ( -1 )
+        alert(Math.round(-0.6)); // ( -1 )
+        alert(Math.round(-0.2)); // (  0 )
+    </script>
+    
+</body>
+</html>

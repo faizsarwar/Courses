@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="myPara"></p>
+
+    <script>
+        var x = "JavaScript (JS) is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.";
+        document.getElementById("myPara").innerHTML = x.slice(0, 33) + " <a href='javascript:void(0)' onclick='msg();'> Click for more... </a>";
+
+        function msg() {
+            
+           document.getElementById("myPara").innerText = x;
+        }
+    </script>
+
+</body>
+</html>

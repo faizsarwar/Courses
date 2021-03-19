@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var WC = {
+
+            winner    : undefined,
+            captain   : undefined,
+            teammates : undefined
+        };
+
+    //  Object's constructor called 'functional constructor'
+        function oneWC(winner, captain, teammates) {
+    //  It's common to use the same names for parameters and properties, but you don't have to
+    //  but same name or different name, the usage of 'this' keyword is neccessary
+            this.winner    = winner;
+            this.captain   = captain;
+            this.teammates = teammates;
+        }
+
+        var WC = new oneWC("Pakistan", "Imran Khan", 11);
+
+        alert(WC);
+    </script>
+    
+</body>
+</html>

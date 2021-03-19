@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var num = +prompt("Enter number :");
+        myTable(num);
+
+        function myTable(num) {
+            
+            document.write("Table of " + num + " is as follows : <br>");
+            for(var i = 1; i <= 10; i++) {
+                document.write(num + " x " + i + " = " + (num*i) + "<br>");
+            }
+        }
+    </script>
+    
+</body>
+</html>

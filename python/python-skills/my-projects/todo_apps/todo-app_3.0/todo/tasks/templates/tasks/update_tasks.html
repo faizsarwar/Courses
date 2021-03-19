@@ -1,0 +1,7 @@
+<h3>update tasks</h3>
+
+<form action="" method="POST">    <!--agr action mai link nhi dengay tu current link pe hi post request krdega-->
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="update_task">
+</form>

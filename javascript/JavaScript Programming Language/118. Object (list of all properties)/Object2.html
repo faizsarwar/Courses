@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var WC = {
+
+            winner    : "Pakistan",
+            captain   : "Imran Khan",
+            teammates : 11,
+            details   : function() {
+               return `WC winner was ${this.winner}, captain was ${this.captain} & teammates are ${this.teammates}`;
+            }
+        };
+
+        var propertiesNamesArray = Object.keys(WC);
+        var propertiesValueArray = Object.values(WC);
+
+        propertiesNamesArray.forEach(function(name) {          //returns property's names
+            alert(x);
+        });
+
+        propertiesValueArray.forEach(function(name) {          //returns property's value
+            alert(x);
+        });    
+    </script>
+    
+</body>
+</html>

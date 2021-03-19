@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Inline event-handling means that you combine bits of JavaScript with HTML markup.-->
+
+    <!-- ex: 1 -->  <input type="button" value="submit" onclick="alert('done');"/>
+    
+    <br>
+    <br>
+
+    <!-- ex: 2 -->  <button onclick="alert('done');"> submit </button>
+    
+    <br>
+    <br>
+    
+    <!-- ex: 3 -->  <form action="https://www.google.com">
+                        <button onclick="alert('are you sure for connect to Google?');"> Google </button>
+                    </form>
+
+    <!-- ex: 4 -->  <a href="https://www.google.com">
+                        <button onclick="alert('are you sure for connect to Google?');"> Google </button>
+                    </a>
+</body>
+</html>

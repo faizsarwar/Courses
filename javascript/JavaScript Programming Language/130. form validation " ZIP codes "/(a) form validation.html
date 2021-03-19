@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checking();">
+        please enter your ZIP: <input type="text" id="zip">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checking() {
+
+            if(document.getElementById("zip").value.length === 0) {
+                alert("please enter a ZIP!");
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

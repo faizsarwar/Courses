@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function myFunction({winner, captain, teammates}) {
+
+            var {winner, captain, teammates} = {
+                winner,
+                captain,
+                teammates
+            };
+     
+            console.log(winner);
+            console.log(captain);
+            console.log(teammates);
+        }
+
+        myFunction({ winner : "Pakistan", captain : "Imran Khan", teammates: 11 });
+    </script>
+    
+</body>
+</html>

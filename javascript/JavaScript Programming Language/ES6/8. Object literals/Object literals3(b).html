@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function myFunction(x) { // var x (placing variable for object's name in parameter)
+
+            var WC = {
+                winner    : x.winner,
+                captain   : x.captain,
+                teammates : x.teammates
+            };
+
+            console.log(WC.winner);
+            console.log(WC.captain);
+            console.log(WC.teammates);
+        }
+
+        myFunction({ winner : "Pakistan", captain : "Imran Khan", teammates: 11 });
+    </script>
+    
+</body>
+</html>

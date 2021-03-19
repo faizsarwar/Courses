@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var f1 = () => 12;
+        console.log(f1());
+
+        var f2 = x => x * 2;
+        console.log(f2(1));
+
+        var f3 = (x, y) => x + y;
+        console.log(f3(1, 2));
+
+        var isEven = n => {   // not return method
+            if (n%2 === 0) {
+                console.log(`${n} is even`);
+            }
+            else {
+                console.log(`${n} is odd`);
+            }
+        }
+        isEven(5);
+    </script>
+
+</body>
+</html>

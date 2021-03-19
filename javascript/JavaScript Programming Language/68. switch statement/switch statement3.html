@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        findGrade(81);
+
+        function findGrade(percentage) {
+
+            switch(true) { // case kis cheez par chal raha ha uski datatype bh wohee hona chaiye jo switch ki hai
+                           // hum percentage mein 'number' patw s kar rahen hain likin case me 'boolean'(true ya false) chaeck kar rahe hain
+                           // if() waale ki tarha, isliye yahan """true""" laga dia hai
+                
+                case (percentage >= 80 && percentage <= 100):
+                alert("Grade A1");
+                break;
+
+                case (percentage >= 70):
+                alert("Grade A");
+                break;
+
+                case (percentage >= 60):
+                alert("Grade B");
+                break;
+
+                case (percentage >= 50):
+                alert("Grade C");
+                break;
+
+                case (percentage >= 40):
+                alert("Grade D");
+                break;
+
+                default:
+                alert("failed");
+                break;
+            }
+        }
+    </script>
+    
+</body>
+</html>

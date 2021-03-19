@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+       <p> My first  name is Muhammad </p>
+       <p> My second name is Ali      </p>
+       <p> My third  name is Sarwar   </p>
+    </div>
+
+    <button onclick="myfunction();"> Try it </button>
+
+    <script>
+        function myfunction() {
+     // 'nodeValue' retruns 1 for HTML tags like <div> & <p> ,etc     
+           var div = document.getElementById("x");
+           div.getElementsByTagName("p")[1].innerHTML = document.getElementsByTagName("p")[2].firstChild.nodeValue;
+        }
+//OR
+//  document.getElementsByTagName("p")[1].innerHTML = document.getElementsByTagName("p")[1].firstChild.nodeValue;
+//  (document.getElementById("x")).document.getElementsByTagName("p")[1].innerHTML = (document.getElementById("x")).document.getElementsByTagName("p")[1].firstChild.nodeValue;
+</script>
+    
+</body>
+</html>

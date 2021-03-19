@@ -1,0 +1,9 @@
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}  <!--(.id ka function id return krta hai urls.py mai detail walay url ka name "detail hai" isliye link mai likha hai)-->
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li> <!--href ka mtlb is p click krnay pr knsi lik khulaygi "/polls/{{ question.id }}/" ye bhi likh sktya hain-->
+    {% endfor %}   <!--upr wala url pattern use krnay say urls.py mai url change krnay say bhi ispe farq nhi parayga-->
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

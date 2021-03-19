@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="http://www.goole.com" target="_blank"> Google </a>
+
+    <script>
+        var a = document.querySelector("a[target]");                       // through 'attribute'
+        a.style.border = "5px solid black";
+
+        var a = document.querySelector("a[href='http://www.goole.com']");  // through 'attribute'
+        a.style.border = "5px solid black";
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checkForName();">
+        plase enter name: <br>
+        <input type="text" id="x">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checkForName() {
+
+            if(document.getElementById("x").value.length === 0) {
+                alert("please enter name!");
+                document.getElementById("x").focus();
+                // If the user hasn't completed the field, changes its background color
+                document.getElementById("x").style.backgroundColor = "skyblue";
+                return false;
+            }
+        // After the user completes the field, restores the background color to
+        // white when the function runs again on the user's subsequent submission
+            document.getElementById("x").style.backgroundColor = "white";
+        }
+    </script>
+    
+</body>
+</html>

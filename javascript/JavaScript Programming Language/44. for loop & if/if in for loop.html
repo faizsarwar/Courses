@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var input = prompt("Enter name : ");
+        var names = ["Ali", "Faiz", "Salman", "Ayesha", "Aamna"];
+        var foundIt = false;
+
+        for(var i = 0; i < names.length; i++) {
+         
+            if (input === names[i]) {
+                foundIt = true;
+                break;
+            }
+        }
+        if (foundIt) {
+            document.write("Yahoo Found it!");
+        }
+        else {
+            document.write("Not found...");
+        }
+    </script>
+    
+</body>
+</html>

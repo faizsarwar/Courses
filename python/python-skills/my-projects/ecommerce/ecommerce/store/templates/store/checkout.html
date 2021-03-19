@@ -1,0 +1,201 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}  
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="box-element" id='form-wrapper'>
+            <form action="" id='form'>
+                {%csrf_token%}
+                <div id ='user-info'>
+                    <div class="form-field">
+                        <input required class="form-control" type="text" name="name" placeholder="Name..">
+                    </div>
+                    <div class="form-field">
+                        <input required class="form-control" type="email" name="email" placeholder="Email..">
+                    </div>
+
+                </div>
+
+                <div id='shipping-info'>
+                    <hr>
+                    <p>Shipping Information:</p>
+                    <hr>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="address" placeholder="Address..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="city" placeholder="City..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="state" placeholder="State..">
+                    </div>
+                    <div class="form-field">
+                        <input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
+                    </div>
+                </div>
+
+                <hr>
+                <input id='form-button' class="btn btn-success btn-block" type="submit" value="continue" >
+            </form>
+
+        </div>
+
+        <br>
+        <div class="box-element hidden" id='payment-info'>
+            <small>Paypal Options</small>
+            <div id="paypal-button-container"></div>
+            <!--<button id="make-payment">Make Payment</button>-->
+        </div>
+
+    </div>
+
+    <div class="col-lg-6">
+        <div class="box-element">
+            <a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+            <hr>
+            <h4>ORDER SUMMARY</h4>
+            <hr>
+            {% for item in items %}
+            <div class="cart-row">
+                <div style="flex:2"><img class="row-image" src="{{item.product.imageURL}}"></div>
+                <div style="flex:2"><p>{{item.product.name}}</p></div>
+                <div style="flex:1"><p>{{item.product.price}} Rs</p></div>
+                <div style="flex:1"><p>x {{item.quantity}}</p></div>
+            </div>
+            {% endfor %}
+            <h5>Items:   {{Order.get_cart_items}}</h5>
+            <h5>Total:   {{Order.get_cart_total|floatformat:2}}</h5>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AXtZlVH53yWcDBbmt3nb0eTp693NYk6-VdkA0t-s2cbsoz0cEwksNdM1q9AVV4Vl1uSDgdn2AJJyNVX5&currency=USD"></script>
+<script>
+
+    var total='{{order.get_cart_total}}'
+    // Render the PayPal button into #paypal-button-container
+    paypal.Buttons({        
+
+        style:{
+            color:'blue',
+            shape:'rect',
+        },
+
+        // Set up the transaction
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: parseFloat(total).toFixed(2)
+                    }
+                }]
+            });
+        },
+
+        // Finalize the transaction
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                // Show a success message to the buyer
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                submitformdata()   //written in our java script
+            });
+        }
+
+
+    }).render('#paypal-button-container');
+</script>
+
+
+<script type="text/javascript">
+    
+    var Shipping="{{Order.shipping}}"
+    var total="{{Order.get_cart_total}}"
+
+    if (Shipping=='False'){
+        document.getElementById('shipping-info').innerHTML='' // ye wo id wala tag show hi nhi  krdega
+    }
+
+    if (user !='AnonymousUser'){
+        document.getElementById('user-info').innerHTML=''
+    }
+
+    if (Shipping=='False' && user!='AnonymousUser'){
+        //hide entire form if user is logged in and shipping is false
+        document.getElementById('form-wrapper').classList.add('hidden')
+        //show payment if logged in user wants to buy item
+        document.getElementById('payment-info').classList.remove('hidden')
+    }
+
+    var form= document.getElementById('form')
+
+    //csrftoken=form.getElementsByTagName('input')[0].value
+    //console.log('new token',form.getElementsByTagName('input')[0].value)
+
+    form.addEventListener('submit',function(e){             // e is the event 
+        e.preventDefault()          // is function say agay ka action perform nhi huga(orignal wala) ju form mai likha huga 
+        console.log("form submitted")
+        document.getElementById('form-button').classList.add('hidden')      //ye id add hujaigi is id k tag  mai 
+        document.getElementById('payment-info').classList.remove('hidden')      //ye id remove hujaigi is id k tag  mai
+    })
+/*
+    document.getElementById("make-payment").addEventListener('click',function(e){
+        submitformdata()
+    })
+*/
+    function submitformdata(){
+        console.log("payment button clicked")
+    
+        var userformdata={
+            'name':null,
+            'email':null,
+            'total':total
+        }
+
+        var shippingInfo={
+            'address':null,
+            'city':null,
+            'state':null,
+            'zipcode':null,
+            'country':null,
+            }
+        
+        if(Shipping!="False"){
+            shippingInfo.address=form.address.value
+            shippingInfo.city=form.city.value
+            shippingInfo.state=form.state.value
+            shippingInfo.zipcode=form.zipcode.value
+      
+        }
+
+        if (user=="AnonymousUser"){
+            userformdata.name=form.name.value
+            userformdata.email=form.email.value
+        }
+
+        var url='/processorder/'
+
+        fetch(url,{
+            method:'POST',
+            headers:{
+                'content-type':'application/JSON',
+                'X-CSRFToken':csrftoken,
+            },
+            body:JSON.stringify({
+                'form':userformdata,
+                'shipping':shippingInfo
+            })
+        })
+        .then((response) => response.json())
+	    	.then((data) => {
+				console.log('Success:', data);
+				alert('Transaction completed');  
+				window.location.href = "{% url 'store' %}"
+
+				})
+	    }
+
+</script>
+
+{% endblock content %}

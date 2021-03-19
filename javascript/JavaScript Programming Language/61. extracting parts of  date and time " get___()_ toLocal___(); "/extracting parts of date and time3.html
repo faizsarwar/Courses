@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var today = new Date();
+        var currentMonth = today.getMonth();  // assings 0-11 accordingly starts from 'jan'
+        var currentDay = today.getDay();      // assings 0-6 accordingly starts form 'sun'
+
+        var months = ["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"];
+        var days = ["sun", "mon", "tue", "thu", "fri", "sat", "sun"];
+         
+        alert(months[currentMonth]);    
+        alert(days[currentDay]);
+    </script>
+    
+</body>
+</html>

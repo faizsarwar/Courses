@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        console.log("starting..");
+
+        async function myfunc() {
+            console.log("inside func..");
+
+            var response = await fetch('https://api.github.com/users');
+            console.log("before response");
+
+            var users = await response.json();
+            console.log("users resolved");
+
+            return users;
+        }
+
+        console.log("before calling..");
+        var msg = myfunc();
+        console.log("after calling..");
+
+        console.log(msg);     //Promise {<pending>}
+
+        console.log("ending..");
+
+        msg.then(data => console.log(data));
+    </script>
+
+</body>
+</html>

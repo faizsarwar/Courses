@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var word = "KING";
+
+        // varaible ko given length tak bara karedega or wahan akhir
+        // mein apni input value ko rakdega taa k length puri hojaye
+
+        console.log(word.padEnd(10, "w"));            // KINGwwwwww
+        console.log(word.padEnd(10, "w").length);     // 10
+
+        console.log(word.padEnd(10));                 // KING      (empty string at last)
+        console.log(word.padEnd(10).length);          // 10
+    </script>
+
+</body>
+</html>

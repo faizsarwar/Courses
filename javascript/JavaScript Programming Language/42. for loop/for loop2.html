@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var firstname = "Muhammad";
+        var secondname = ["Ali", "Faiz", "Salman", "Ayesha", "Aamna"];
+        var lastname = "Sarwar";
+
+        for(var i = 0; i < secondname.length; i++) {
+
+            if(secondname[i] === "Ali" || secondname[i] === "Faiz" || secondname[i] === "Salman") {
+                
+                document.write("name is : " + firstname + " " + secondname[i] + " " + lastname);
+            }
+            else if (secondname[i] === "Ayesha" || secondname[i] === "Aamna") {
+                    
+                document.write("name is : " + secondname[i] + " " + lastname);  
+            }
+
+            document.write("<br>");
+        }
+    </script>
+
+</body>
+</html>

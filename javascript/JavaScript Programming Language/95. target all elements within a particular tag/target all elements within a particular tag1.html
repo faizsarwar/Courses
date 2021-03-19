@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+       <p> My first  name is Muhammad </p>
+       <p> My second name is Ali      </p>
+       <p> My third  name is Sarwar   </p>
+    </div>
+ 
+    <script>
+        var divv = document.getElementById("x");
+     // Once the id of the targeted div has been assigned to variable, for example
+     // 'divv', you can assemble a collection of all the paragraphs within that 'divv'.
+     // Instead of writing... | document.getElementsByTagName("p"); | 
+     //                    OR |     divv.getElementsByTagName("p"); |
+
+        var divvPara = divv.getElementsByTagName("p");
+        for(var i = 0; i < divvPara.length; i++) {
+            divvPara[i].style.backgroundColor = "yellow";
+        }        
+    </script>
+    
+</body>
+</html>

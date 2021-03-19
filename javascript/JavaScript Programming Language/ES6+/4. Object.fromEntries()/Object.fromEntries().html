@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var siblings  = [["Ali", 1], ["Faiz", 2], ["Salman", 3], ["Ayesha", 4], ["Aamna", 5]];
+        var detailObj = Object.fromEntries(siblings); 
+
+        console.log(detailObj);
+        // Object.fromEntries() returns object having enumerable property key & value
+        // {
+        //   Ali: 1,
+        //   Faiz: 2,
+        //   Salman: 3,
+        //   Ayesha: 4,
+        //   Aamna: 5
+        // }
+    </script>
+    
+</body>
+</html>

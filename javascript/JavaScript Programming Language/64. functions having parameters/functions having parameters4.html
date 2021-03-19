@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var num = prompt("Enter number :");
+        num = parseInt(num);
+        
+        function myFactorial(num) {
+            var result;
+            var factorial = 1;
+
+            if (num >= 0) {
+
+                if(num === 0 || num === 1) {
+                   result = factorial;
+                }
+                else if (num >= 2) {
+
+                    for(var i = 1; i <= num; i++) {
+                        factorial = factorial * i;
+                    }
+                    result = factorial;
+                }
+                document.write("factorial of " + num + " is : " + result + "<br>");
+            }
+            else if (num < 0) {
+                document.write("factorial of a non-negative integer n, denoted by n!, Sorry!");
+            }
+            else {
+                document.write("invalid input!")
+            }
+        }
+
+        myFactorial(1);
+        myFactorial(num);
+    </script>
+    
+</body>
+</html>

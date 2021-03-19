@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var text = "Okay Bye, World War II done.";
+       
+        var firstChar_i = text.indexOf("World War II");
+
+        if (firstChar_i !== -1) {
+            text = text.slice(0, firstChar_i) + "the Second World War" + text.slice(firstChar_i + 12);
+            alert(text);
+        }
+    </script>
+    
+</body>
+</html>

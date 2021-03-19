@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checking();">
+        please enter your password : (no spaces, 8-12 characters) <br>
+        <input type="password" id="x">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checking() {
+            try {
+                if(document.getElementById("x").value.length === 0) {
+                    throw "please enter password, can't be blank!";
+                }
+                else if(document.getElementById("x").value.indexOf(" ") !== -1) {
+                    throw "please enter password, can't any space!";
+                }       
+                else if(document.getElementById("x").value.length < 8) {
+                    throw "please enter password of min 8 characters!";
+                }
+                else if(document.getElementById("x").value.length > 12) {
+                    throw "please enter password of max 12 characters!";
+                }
+            }
+            catch(err) {
+                alert(err);
+            }
+        }
+    </script>
+    
+</body>
+</html>

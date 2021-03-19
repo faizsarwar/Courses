@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form onsubmit="return checkForName();">
+        plase enter name: <br>
+        <input type="text" id="x">
+        <input type="submit" value="submission">
+    </form>
+
+    <script>
+        function checkForName() {
+
+            if(document.getElementById("x").value.length === 0) {
+                alert("please enter name!");
+            //  can use the focus method to place the cursor in the field that needs to be complete
+                document.getElementById("x").focus();
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var num = 2645;
+        var str = num.toString();
+
+        if (str.charAt(str.length - 1) === "5") {
+            str = str.slice(0, str.length - 1) + "6"; // taking all string form start to before end & add 6
+        }
+        
+        num = Number(str);
+        alert(num.toFixed(2));
+    </script>
+    
+</body>
+</html>

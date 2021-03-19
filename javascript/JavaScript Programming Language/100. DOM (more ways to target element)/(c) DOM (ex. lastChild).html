@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="ul"><li> Coffee </li><li> Tea </li><li> Drinks </li></ul>
+    <!-- Whitespace inside elements is considered as text, and text is considered as nodes.
+         If you add whitespace before the last LI element, the result will be "undefined". -->
+    
+    <button onclick="myFunction()"> Try it </button>
+    <p id="p"></p>
+    
+    <script>
+        function myFunction() {
+    //  'lastChild' property returns the last child node of the specified node, as a Node object.
+           var x = document.getElementById("ul").lastChild.innerHTML;
+           document.getElementById("p").innerHTML = x;
+        }
+    </script>
+    
+</body>
+</html>

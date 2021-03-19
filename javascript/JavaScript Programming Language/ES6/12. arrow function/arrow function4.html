@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+        arr = arr.map( x => x * 2 );  // 1 parameter hoga tw index ki value ayegi
+        console.log(arr);
+
+        var names = ["Ali", "Faiz", "Salman", "Ayesha", "Aamna"];
+        names.map(                    // 2 parameters honge tw index ki value OR index ayegi
+                  (item,index) => { console.log(`index is ${index} element value is ${item}`); }
+                 );
+    </script>
+
+</body>
+</html>

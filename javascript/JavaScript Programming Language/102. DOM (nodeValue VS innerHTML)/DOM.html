@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Do <em>not</em> hit! </h1>
+
+    <script>
+        // The node value includes only the characters that comprise the
+        // single text node.
+        var x = document.getElementsByTagName("h1")[0].childNodes[0].nodeValue; /*OR .firstchild*/
+        alert(x);
+
+        // innerHTML includes all the descendants of the element, including
+        // any inner element nodes like <em> as well as text nodes.
+        var y = document.getElementsByTagName("h1")[0].innerHTML;
+        alert(y);
+    </script>
+    
+</body>
+</html>

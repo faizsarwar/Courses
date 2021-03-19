@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var a;
+
+        a = 10 + 2 * 2;          // BODMAS rule
+        alert(a);  //14
+        
+        a = (10 + 2 * 4) * 2;    // BODMAS rule
+        alert(a);  //36
+        
+        a = ((10 + 2) * 4) * 2   // BODMAS rule
+        alert(a);  //96
+
+        a = (2 + 2) + (3 + 5);   // left to right first then solve bracket (2 + 2)
+        alert(a);  //12
+        
+        a = (2 + 2) + (3 + 5) * 2;  // left to right first then solve bracket (2 + 2) like BODMAS
+        alert(a);  //20
+
+        a = (2 + 2) + ( (3 + 5) * 2 );  // left to right first then solve bracket (2 + 2) like BODMAS
+        alert(a);  //20
+    </script>
+    
+</body>
+</html>

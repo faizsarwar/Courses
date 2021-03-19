@@ -1,0 +1,25 @@
+#a, #b {
+    font-family: monospace;
+}
+#c {
+    border-radius: 150px;
+}
+
+
+
+
+.big {
+    font-size: 40px;
+}
+.margin {
+    margin-left: 100px;
+}
+.float {
+    float: right;
+}
+.border {
+    border: 2px solid black;
+}
+.border-radius {
+    border-radius: 150px;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var admission = {
+
+            namee: "Ali", agee: 20, genderr: "male",
+            
+            'ali@gmail.com'    : { name: "Ali"   , age: 20, gender: "male" },
+            'faiz@gmail.com'   : { name: "Faiz"  , age: 19, gender: "male" },
+            'salman@gmail.com' : { name: "Salman", age: 16, gender: "male" }
+        };
+
+        console.log(Object.keys(admission));         //returns property's names
+        console.log(Object.keys(admission).length);
+
+        console.log(Object.values(admission));       //returns property's value
+        console.log(Object.values(admission).length);
+    </script>
+    
+</body>
+</html>

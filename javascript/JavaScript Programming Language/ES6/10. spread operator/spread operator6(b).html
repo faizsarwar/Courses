@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var WC = {winner : "Pakistan", captain : "Imran Khan", teammates : 11};
+
+        //without spread operator
+        var players = {
+            batsman : 5,
+            bowler  : 5,
+            keeper  : 1,
+            ...WC
+        };
+
+        console.log(players);
+        console.log(players.WC);     //OR spread hai isliye nahi likh sakte--> WC
+        console.log(players.winner); //OR spread hai isliye likh sakte hain--> players.wnner
+    </script>
+    
+</body>
+</html>

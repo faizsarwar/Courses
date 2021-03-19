@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var names1 = ["Salman", "Ayesha"];
+
+        //with spread operator       (Copy Array)
+        var names2 = [...names1];   //copy by value
+
+        // if push
+        names1.push("Aamna");
+
+        console.log(names1);// ["Salman", "Ayesha", "Aamna"]
+        console.log(names2);// ["Salman", "Ayesha"]  (not changes updated)
+    </script>
+    
+</body>
+</html>

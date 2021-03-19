@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // codePointAt() method returns a non-negative integer that is the Unicode code point.     
+      
+        //------------------------------------------------------------------------------------
+
+        var message = "I am ALI & I like JAVASCRIPT";
+        
+        // Here, we will print the Unicode point of a character by passing its specific index.
+        alert(message.codePointAt(2));
+        
+        // Here, we will not pass any index number with the method. In such case, it will return the Unicode point of first character.
+        alert(message.codePointAt());
+        
+        // Here, we will print the Unicode point of last character in a string.
+        alert(message.codePointAt(message.length - 1));
+        
+        // Here, we will provide the index number greater than the length of the string. In such case, the method returns 'undefined'.
+        alert(message.codePointAt(2000));
+    </script>
+    
+</body>
+</html>

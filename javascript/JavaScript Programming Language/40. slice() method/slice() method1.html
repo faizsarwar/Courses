@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var names = ["Ali", "Faiz", "Salman", "Ayesha", "Aamna"];
+        alert(names);
+        
+        //  Use the slice() method to copy one or more consecutive elements in any
+        //  position and put them into a new array without chaning the original one.
+
+        var brothers = names.slice(0, 3);   // copies from 0 index to 2 index
+        alert("Brothers are " + brothers);
+        var sisters = names.slice(3, 5);    // copies from 3 index to 4 index
+        alert("Sisters are " + sisters);
+    </script>
+    
+</body>
+</html>

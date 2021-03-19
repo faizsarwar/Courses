@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="CSS.css" rel="stylesheet">
+</head>
+<body>
+
+    <p id="a" onclick="makeA();">   Alhamdullilah for everything..!!! </p>
+    <p id="b" onclick="makeB();">   Alhamdullilah for everything..!!! </p>
+    <img src="tomb1.jpg" onclick="makesC();" height="315" width="455" id="c"> <br>
+    
+    <script>
+        function makeA() {
+            document.getElementById("a").className = "big";
+            document.getElementById("a").className = "margin";
+                                                //if = then override
+        }
+
+        function makeB() {
+            document.getElementById("b").className = "big";
+            document.getElementById("b").className += " margin";
+                                                //if +=(space) then add
+        }
+
+        function makesC() {
+//OR
+            document.getElementById("c").className += " float";
+            document.getElementById("c").className += " border";
+            document.getElementById("c").className += " border-radius";
+            //It's += instead of just = & A space before the class name is required.  
+        }
+    </script>
+
+</body>
+</html>

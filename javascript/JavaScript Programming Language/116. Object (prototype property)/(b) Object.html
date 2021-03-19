@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function oneWC(winner, captain, teammates) {
+
+            this.winner    = winner;
+            this.captain   = captain;
+            this.teammates = teammates;
+        }
+
+    // 'prototype' property allows you to add new property also as a method to object's functional constructor
+        oneWC.prototype.details = function() {   //anonymous function
+            return `WC winner was ${this.winner}, captain was ${this.captain} & teammates are ${this.teammates}`;         
+        }
+        
+        var WC92 = new oneWC("Pakistan", "Imran Khan" , 11);
+        var WC11 = new oneWC("India"   , "MS Dhoni"   , 11);
+        var WC19 = new oneWC("England" , "Eoin Morgan", 11);
+        
+        alert(WC92.details());
+        alert(WC11.details());
+        alert(WC19.details());
+    </script>
+    
+</body>
+</html>

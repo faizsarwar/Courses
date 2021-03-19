@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var WC = {
+
+            winner    : undefined,
+            captain   : undefined,
+            teammates : undefined
+        };
+
+        function oneWC(winner, captain, teammates) {
+        
+            this.winner    = winner;
+            this.captain   = captain;
+            this.teammates = teammates;
+            this.details   = function() {   //anonymous function
+        //  can attach a function to a 'functional constructor's of an object
+               return `WC winner was ${this.winner}, captain was ${this.captain} & teammates are ${this.teammates}`;         
+            }
+        }
+
+        var WC = new oneWC("Pakistan", "Imran Khan", 11);
+     
+        alert(WC);
+        alert(WC.details());
+    </script>
+    
+</body>
+</html>

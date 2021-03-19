@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var names = ["Ali"];
+
+        var [elder, father = "Sarwar"] = names; //'father' falls back to 'Sarwar' because no
+                                                //item defined at second place of the array 
+        console.log(elder);
+        console.log(father);
+    </script>
+    
+</body>
+</html>

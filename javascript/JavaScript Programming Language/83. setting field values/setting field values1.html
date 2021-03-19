@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+      <p> Khi zip is 10 <br> Lhr zip is 20 <br> Psh zip is 30 </p>
+  
+      <form>
+         ZIP:  <br>
+         <input type="text" id="zip" onblur="fillCity();"/> <br>
+         City: <br>
+         <input type="text" id="city"/>
+      </form>
+      
+      <script>
+            function fillCity() {
+      
+               switch (document.getElementById("zip").value) {
+                  case "10" :
+                     document.getElementById("city").value = "Karachi";
+                     break;
+                  case "20" :
+                     document.getElementById("city").value = "Lahore";
+                     break;
+                  case "30" :
+                     document.getElementById("city").value = "Peshawar";
+                     break;
+                  default :
+                     document.getElementById("city").value = "undefined";
+                     break;
+               }
+            }
+      </script>
+
+</body>
+</html>

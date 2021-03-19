@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var today = new Date();
+        var oneDay = new Date("June 30, 2035");
+        
+        // extract from both dates the milliseconds that have elapsed since the reference date of January 1, 1970
+        var mlsecToday = today.getTime();
+        var mlsecOneDay = oneDay.getTime();
+      
+        // subtracts the milliseconds since the reference date of the current moment from the milliseconds since the reference date of June 30, 2035.
+        var mlsecDiff = mlsecOneDay - mlsecToday;
+        
+        // converts the milliseconds to days and rounds down
+        var days = mlsecDiff / (1000 * 60 * 60 * 24);
+        var years = (mlsecDiff / (1000 * 60 * 60 * 24 * 365));
+        var months = (((mlsecDiff / (1000 * 60 * 60 * 24) / 365) * 12) % 12);
+      
+        days = Math.floor(days);
+        years = years.toFixed(0);
+        months = months.toFixed(0);
+
+        alert("days diff is " + days);
+        alert("years diff is " + years);
+        alert("months diff is " + months);
+    </script>
+
+</body>
+</html>

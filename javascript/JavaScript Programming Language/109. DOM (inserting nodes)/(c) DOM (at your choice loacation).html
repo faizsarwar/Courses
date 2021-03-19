@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+        <p> abcd </p><p> abcd </p><p> abcd </p><p> abcd </p><p> abcd </p><p> abcd </p>
+        <!--Whitespace inside elements is considered as text, and text is considered as nodes-->
+    </div>
+
+    <script>
+        var div = document.getElementById("x");
+
+        var newP = document.createElement("p");
+        var newText = document.createTextNode("My name is ALI");
+        newP.appendChild(newText);
+
+// There is no insertAfter method as such. But you can still
+// do it. Simply insertBefore the target node's 'nextSibling'
+        var targetPara = div.childNodes[3];
+        div.insertBefore(newP, targetPara.nextSibling);
+    </script>
+    
+</body>
+</html>

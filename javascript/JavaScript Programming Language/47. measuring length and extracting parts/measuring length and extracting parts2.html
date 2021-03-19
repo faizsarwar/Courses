@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Sometimes it's useful to know how many characters are in a string.
+        // For example, suppose you want to slice the first three characters from any string
+        // than exceeds three characters in length, for example, slicing "Nov" from "November".
+        // ---------------------------------------------------------------------------------------
+        // To copy a section of a string, you use the slice method.
+
+        var month = prompt("Enter a month");
+        if (month.length > 3) {
+            alert(month.slice(0, 3));
+        }
+        else if (month.length === 3) {
+            alert(month);
+        }
+        else if (month.length < 3) {
+            alert("please enter full month name..!!")
+        }
+    </script>
+    
+</body>
+</html>

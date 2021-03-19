@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var siblings = [["Ali", 20], ["Faiz", 19], ["Salman", 16], ["Ayesha", 11], ["Aamna", 03]];
+        var details  = siblings.flatMap(([name, age]) => { return {name, age} });
+
+        console.log(details);
+        // Array.flatMap() returns array of object
+        // [
+        //   0: { name: "Ali"   , age: 20 } 
+        //   1: { name: "Faiz"  , age: 19 }
+        //   2: { name: "Salman", age: 16 }
+        //   3: { name: "Ayesha", age: 11 }
+        //   4: { name: "Aamna" , age: 03 } 
+        // ]
+    </script>
+    
+</body>
+</html>

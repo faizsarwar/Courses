@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+
+      <p> Khi zip is 10 <br> Lhr zip is 20 <br> Psh zip is 30 </p>
+  
+      <form>
+         ZIP:  <br>
+         <input type="text" id="zip" onblur="fillCity('zip');"/> <br>
+         City: <br>
+         <input type="text" id="city" onblur="fillZip('city');"/>
+      </form>
+      
+      <script>
+           function fillCity(x) {
+     
+               switch (document.getElementById(x).value) {
+                  case "10" :
+                     document.getElementById("city").value = "Karachi";
+                     break;
+                  case "20" :
+                     document.getElementById("city").value = "Lahore";
+                     break;
+                  case "30" :
+                     document.getElementById("city").value = "Peshawar";
+                     break;
+                  default :
+                     document.getElementById("city").value = "undefined";
+                     break;
+            }
+         }
+  
+         function fillZip(x) {
+            
+            switch (document.getElementById(x).value) {
+               case "Karachi":
+                  document.getElementById("zip").value = "10";
+                  break;
+
+               case "Lahore":
+                  document.getElementById("zip").value = "20";
+               break;
+               
+               case "Peshawar":
+                  document.getElementById("zip").value = "30";
+               break;
+
+               default:
+                  document.getElementById("zip").value = "undefined";
+                  break;
+            }
+         }
+      </script>
+
+</body>
+</html>

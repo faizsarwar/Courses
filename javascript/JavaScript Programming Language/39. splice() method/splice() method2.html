@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var pets = ["dog", "cat", "cow"];
+        alert(pets);
+
+        pets.splice(2, "xyz", "duck");   // on 2nd place String " " returns 0
+        alert(pets);
+
+        pets.splice(2, true, "lion");    // on 2nd place 'true' returns 1
+        alert(pets);
+        
+        pets.splice(2, false, "tiger");  // on 2nd place 'false' returns 0
+        alert(pets);
+
+        //-----------------------------------------------------------------------------------------
+        pets.splice(2, 100);  // index 2 k baad sab remove kardega index 100 tak agar hai ya nahi
+        alert(pets);
+        pets.splice(1);       // index 1 k baad sab remove kardega end tak
+        alert(pets);
+    </script>
+    
+</body>
+</html>

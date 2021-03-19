@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function oneWC(winner, captain, teammates) {
+
+            this.winner    = winner;
+            this.captain   = captain;
+            this.teammates = teammates;
+        }
+
+        var WC92 = new oneWC("Pakistan", "Imran Khan" , 11);
+        var WC11 = new oneWC("India"   , "MS Dhoni"   , 11);
+        var WC19 = new oneWC("England" , "Eoin Morgan", 11);
+
+        alert(WC92);
+        alert(WC11);
+        alert(WC19);
+    </script>
+    
+</body>
+</html>

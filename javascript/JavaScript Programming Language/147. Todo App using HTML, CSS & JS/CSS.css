@@ -1,0 +1,73 @@
+body {
+    background-color: darkgoldenrod;
+}
+.fokat {
+    color: transparent;
+}
+
+
+
+#TOP1 {
+    margin-top: -190px;
+    margin-left: 13px;
+}
+@font-face {
+    src: url('fbfont.OTF');
+    font-family: fbfont;
+}
+#TOP1A {
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    word-spacing: -2px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: fbfont;
+    font-size: 50px;
+    margin-left: 530px;
+    margin-top: 145px;
+}
+#TOP1A1 {
+    width: 300px;
+    margin-left: 18px;
+}
+#TOP1A button {
+    background-color: black;
+    border-radius: 12px;
+    border: 1px solid white;
+    color: white;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: capitalize;
+    margin-left: 7px;
+}
+#TOP1A2A {
+    margin-left: -33px;
+    margin-top: -70px;
+}
+#TOP1A2B {
+    margin-left: 44px;
+    margin-top: -102px;
+}
+#TOP1A2C {
+    margin-left: 142px;
+    margin-top: -102px;
+}
+#TOP1A2D {
+    margin-left: 246px;
+    margin-top: -103px;
+}
+
+
+
+
+#TOP1B {
+    margin-left: 620px;
+}
+#TOP1B p {
+    color: black;
+    font-size: 40px;
+    margin-top: -40px;
+}

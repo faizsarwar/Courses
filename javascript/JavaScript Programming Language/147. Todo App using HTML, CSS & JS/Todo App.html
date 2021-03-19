@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="CSS.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="TOP1">
+        <div id="TOP1A"> 
+            <p class="fokat">.</p>
+
+            <p id="TOP1A1"> TUDO APP </p>
+            
+            <p id="TOP1A2A">
+               <button onClick="handleClick1();"> ADDED </button>
+            </p>
+            
+            <p id="TOP1A2B">
+                <button onClick="handleClick2();"> DEL LAST </button>
+            </p>
+
+            <p id="TOP1A2C">
+                <button onClick="handleClick3();"> DEL FIRST </button>
+            </p>
+
+            <p id="TOP1A2D">
+                <button onClick="handleClick4();"> DEL ALL </button>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        var i = 1;
+
+        function handleClick1() {
+
+            if(!document.querySelector("#TOP1B")) {        // agar exist nahi karta tw banaenge q k usme add karna hoga
+                var grip = document.querySelector("#TOP1");
+
+                var newBox = document.createElement("div");
+                newBox.setAttribute("id", "TOP1B")
+
+                grip.appendChild(newBox); 
+            }
+
+            var grip = document.querySelector("#TOP1B");   // exist karta ha ab isme add karte jayenge
+
+            var newPara = document.createElement("p");
+            var newText = document.createTextNode(`${i} times`); i++;
+            newPara.appendChild(newText);
+
+            grip.appendChild(newPara);
+        }
+
+        function handleClick2() {
+            
+            var div = document.querySelector("#TOP1B");   // exist karta ha
+            var removeP = div.lastChild;                  // target karlia or isme se delete kia last wala
+            div.removeChild(removeP);
+        }
+
+        function handleClick3() {
+            
+            var div = document.querySelector("#TOP1B");   // exist karta ha
+            var removeP = div.firstChild;                 // target karlia or isme se delete kia first wala
+            div.removeChild(removeP);
+        }
+
+        function handleClick4() {
+
+            var grip = document.querySelector("#TOP1");   // exist karta ha target karlia or ise hi delete kardia
+            var removeDiv = document.querySelector("#TOP1B");
+            grip.removeChild(removeDiv); i = 1;
+        }
+    </script>
+    
+</body>
+</html>

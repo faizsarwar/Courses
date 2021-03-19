@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="x">
+       <p>            My first  name is Muhammad </p>
+       <p>            My second name is Ali      </p>
+       <p>            My third  name is Sarwar   </p>
+       <p id="empty">                            </p>
+    </div>
+
+    <script>
+        var divv = document.getElementById("x");
+
+        var empPara = document.getElementById("empty");         //No 'divv.' due to it can assemble
+        empPara.innerHTML = "Alhamdullilah for everything..!!"; //a collection of all of paragraphs
+                                                                //ID pakar k us k andar ki ID pakarna masla
+
+        var divvPara = divv.getElementsByTagName("p");          //ID pakar k us k andar ki TagName pakarna masla nahi
+        
+        for(var i = 0; i < divvPara.length; i++) {
+            divvPara[i].style.backgroundColor = "yellow";
+        }        
+    </script>
+    
+</body>
+</html>

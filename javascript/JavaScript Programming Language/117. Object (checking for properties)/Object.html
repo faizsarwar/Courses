@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var WC = {
+
+            winner    : "Pakistan",
+            captain   : "Imran Khan",
+            teammates : 11,
+            details   : function() {
+               return `WC winner was ${this.winner}, captain was ${this.captain} & teammates are ${this.teammates}`;
+            }
+        };
+
+        //  can check to see if a property of an object exists
+        alert('winner' in WC); /*result is (true OR false)*/
+        alert('details' in WC);/*result is (true OR false)*/
+        //  property is in a 'quotes'
+        //  object is not in 'quotes'
+    </script>
+    
+</body>
+</html>

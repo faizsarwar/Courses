@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="https://www.google.com"   id="a1"> </a>
+    <br>
+    <a href="https://www.facebook.com" id="a2"> </a>
+    <br>
+    <a id="a3">                                 </a>    
+  
+    <script>
+     // find out whether an element has a particular attribute with 'hasAttribute'
+        var x = document.getElementById("a1");
+        if(x.hasAttribute("href")) {
+            x.innerHTML = "click here for Google";
+        }
+
+     // read the value of an attribute with 'getAttribute'
+        var y = document.getElementById("a2");
+        if(y.getAttribute("href") === "https://www.facebook.com") {
+            y.innerHTML = "click here for Facebook";
+        }
+
+     // set the value of an attribute with 'setAttribute'
+        var z = document.getElementById("a3");
+        z.setAttribute("href", "https://www.twitter.com");
+        z.innerHTML = "click here for Twitter";
+    </script>
+    
+</body>
+</html>

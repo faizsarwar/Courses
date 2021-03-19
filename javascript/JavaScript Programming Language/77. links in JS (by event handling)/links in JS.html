@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--Inline event-handling means that you combine bits of JavaScript with HTML markup.-->
+
+    <!-- ex: 1 -->  <a href="#" onclick="alert('done');"> click </a>
+    <!-- # tells the browser to reload the current page. -->
+
+    <br>
+    <br>
+
+    <!-- ex: 2 -->  <a href="https://www.google.com" onclick="alert('are you sure for connect to Google?');"> click </a>
+    <!-- link tells the browser to move to that page. -->
+
+    <br>
+    <br>
+
+    <!-- ex: 3 -->  <a href="JavaScript:void(0)" onclick="alert('done');"> click </a>
+    <!-- nothing at all happens except for the JavaScript that executes -->
+
+    <br>
+    <br>
+
+    <!-- ex: 4 -->  <a href="JavaScript:void(0)" onclick="message('done')"> click </a>
+    <!-- When clicking the link, the event-handler calls the function, passing the argument -->
+    <script src="JS.js"></script>
+                   
+</body>
+</html>
