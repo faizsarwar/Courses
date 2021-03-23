@@ -1,6 +1,6 @@
 [development]
 address = "localhost"
-port = 8010
+port = 8000
 keep_alive = 5
 read_timeout = 5
 write_timeout = 5
