@@ -10,6 +10,8 @@ edition = "2018"
 rust_gpiozero = "0.2.0"
 rocket = "0.4.7"
 serde = { version = "1.0", features = ["derive"] }
+rppal = "0.11.3"
+
 
 [dependencies.rocket_contrib]
 version = "0.4.5"

@@ -1,10 +1,13 @@
 #![feature(proc_macro_hygiene, decl_macro)]
 use rocket::http::RawStr;
 use std::fs::File;
+use std::error::Error;
 use std::io::prelude::*;
 use rust_gpiozero::*;
 use std::collections::HashMap;
 use rocket_contrib::templates::Template;
+use rppal::gpio::Gpio;
+use rppal::system::DeviceInfo;
 
 use serde::Serialize;
 
@@ -17,9 +20,11 @@ fn string_to_static_str(s: String) -> &'static str {
 
 
 
-fn play(){
+fn play()-> Result<(), Box<dyn Error>>{
     let mut state="ON";
-        LED::new(4).set_active_high(true);
+        // LED::new(4).set_active_high(true);
+        let mut pin = Gpio::new()?.get(4)?.into_output();
+        pin.set_high();
     while state=="ON"{
         println!("on hua aaww  {}",state);
         let mut file=File::open("state.txt").expect("w");
@@ -27,8 +32,10 @@ fn play(){
         file.read_to_string(&mut contents).expect("w");    
         state=string_to_static_str(contents);
     }
-        LED::new(4).close();
-        println!("exiting now")
+        // LED::new(4).close();
+        pin.set_reset_on_drop(true);
+        println!("exiting now");
+        Ok(())
 }
 
 
