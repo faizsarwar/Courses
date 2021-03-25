@@ -3,12 +3,9 @@ use rocket::http::RawStr;
 use std::fs::File;
 use std::error::Error;
 use std::io::prelude::*;
-use rust_gpiozero::*;
 use std::collections::HashMap;
 use rocket_contrib::templates::Template;
 use rppal::gpio::Gpio;
-use rppal::system::DeviceInfo;
-
 use serde::Serialize;
 
 #[macro_use] extern crate rocket;
@@ -22,17 +19,16 @@ fn string_to_static_str(s: String) -> &'static str {
 
 fn play()-> Result<(), Box<dyn Error>>{
     let mut state="ON";
-        // LED::new(4).set_active_high(true);
         let mut pin = Gpio::new()?.get(4)?.into_output();
         pin.set_high();
     while state=="ON"{
         println!("on hua aaww  {}",state);
-        let mut file=File::open("state.txt").expect("w");
+        let mut file=File::open("state.txt").expect("error opnening state file");
         let mut contents=String::new();
-        file.read_to_string(&mut contents).expect("w");    
+        file.read_to_string(&mut contents).expect("error reading state file");    
         state=string_to_static_str(contents);
     }
-        // LED::new(4).close();
+        pin.set_low();
         pin.set_reset_on_drop(true);
         println!("exiting now");
         Ok(())
@@ -62,7 +58,7 @@ fn switch1(name: &RawStr)->Template{
     let mut state;
     
     if name.as_str()=="on"{
-    state="ON";
+    state="ON"; 
     let mut file=File::create("state.txt").expect("ee");
     file.write_all(b"ON").expect("error writting");
     play();
