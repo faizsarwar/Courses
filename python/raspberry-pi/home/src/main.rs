@@ -19,15 +19,15 @@ fn string_to_static_str(s: String) -> &'static str {
 
 fn play(){
     let mut state="ON";
+        LED::new(4).set_active_high(true);
     while state=="ON"{
         println!("on hua aaww  {}",state);
         let mut file=File::open("state.txt").expect("w");
         let mut contents=String::new();
         file.read_to_string(&mut contents).expect("w");    
         state=string_to_static_str(contents);
-        LED::new(4).set_active_high(true);
     }
-        // LED::new(4).close();
+        LED::new(4).close();
         println!("exiting now")
 }
 
