@@ -1,0 +1,148 @@
+Fullfilment hr agent keliye alag say on krwani paraygi
+
+------------------------------------------  ON GOOGLE CLOUD PLATFORM -----------------------------------------------------------
+
+account create krna parayga
+
+cloud platform pr jakar
+
+--> create function pr jaingay
+
+allow unauthenticate pr click kru name do bs aur create krdo (index.js aur package.json pre built hugi ismay)
+
+
+dliaogflow k fullfillment ka code copy kr ke gcp k index .js file mai paste krengay 
+----> entry point same huna chayie ju code mai export.(kay sath likha huta hai  process.env.debug k neechay wali line)
+----> calling is naam say hi hugi gcp console pr ju name show hura hai us say nhi hugi 
+
+
+---> pacakge.json mai ye paste krengay  versions k neechay
+  "dependencies": {
+    "actions-on-google": "^2.13.0",
+    "dialogflow-fulfillment": "^0.6.1",
+    "firebase-admin": "^5.13.1",
+    "firbase-functions":"^2.0.2",
+    "dialogflow":"^0.5.0"
+  }
+
+--> deploy k button pr click krengay
+
+
+
+url 
+--> url keliye gcp pe jaoo function p click krengay , trigger pr click krengay, trigger url pr click krengay link open hugi phir new page wali pehli link copy krengay
+
+---> webhook ko enable krengay aur wo url paste krdegay
+
+---> dialogflow pr hi likhengay tu us code wala answer ayga ju code mai set kia huga 
+
+---> is say server run kr k chorna nhi parayga bs khud chlta rahega
+
+
+
+
+
+
+google pr jisko project bolte hain usko azure mai resoure group bolte hain
+
+
+
+------------------------------------------------- ON AZURE ----------------------------------------------------------
+
+azure account by sir faheem:
+
+email: piaiciot@outlook.com
+password: Asdbnm@123
+
+azure mai hm database bhi connect kr sktay hain 
+
+
+
+
+
+azure cli install krengay us say bar bar gui mai nhi jana parayga cmd say hi hujaiga
+
+1) install azure cli.
+
+2) install azure core tools.
+
+
+
+----------using cmd
+
+--->az login
+
+-----------to create resource group
+-->az group create --name <enter-group-name> --location centralus
+
+-----------to create storage account
+-->az storage account create --name <enter-sorage-account-name> --reosurce-group <group-name> --location centralus --sku standard_LRS
+
+-----------to create function app
+-->az functionapp create --resource-group <group-name> --consumption-plan-location centralus --name <enter-function-app-name> --storage-account <storage-account-name> --runtime-node
+
+
+
+
+
+----------------------------------- Writing a function to deploy------------------------------------------------------------------------
+
+FOR ONLINE PORTAL SETUP
+
+-->az group create --name <resource-group-name> --location centralus
+-->az storage account create --name <azurefuncstorage-name> --resource-group <resource-group-name> --location centralus --sku Standard_LRS
+-->az functionapp create --resource-group <resource-group-name> --consumption-plan-location centralus --name <appFunc-name> --storage-account <azurefuncstorage-name> --runtime node
+
+ON MACHINE SETUP
+
+-->func init <function-name>
+-->cd <function-name>
+-->func new --name <function-name> --template "HttpTrigger"
+
+
+after creting function create package.json
+
+-->npm init
+-->npm install --save actions-on-google express azure-function-express
+
+
+index.js create hujaigi
+
+function.json mai 'authlevel':'anonymous' set krna huga 
+
+set proxy to avoid an issue
+-->function k root folder  pr proxies.json banaingay AUR YE PASTE krengay FUNCTION NAME WHI WALA DENGAY jU HAMARAY FN KA HUGA
+
+{
+        "$schema": "http://json.schemastore.org/proxies",
+        "proxies": {
+          "proxy1": {
+            "matchCondition": {
+              "methods": [
+                "POST"
+              ],
+              "route": "/api/appFunc01"
+            },
+            "backendUri": "https://localhost/api/appfunc11",
+            "requestOverrides": {
+              "backend.request.headers.Accept-Charset": "utf-8"
+            }
+          }
+        }
+}
+
+
+DEPLOY KRENGAY CODE KO 
+
+-->func azure functionapp publish <APP-NAME> --force
+
+
+INVOKE URL MILEGA USKO FULLFILLMENT MAI PASTE KRDU
+
+
+khali first time kra huga phir chages kr k deploy krte rehengay
+
+------------------------------------------------------------ extra ------------------------------------------------------------------
+
+voice bot keliye azure aur database keliye mongodb cloud use krsktay hain in dono pr data raspberry pi say ayga.
+
