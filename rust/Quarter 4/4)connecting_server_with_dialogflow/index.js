@@ -1,7 +1,9 @@
 const {WebhookClient}=require("dialogflow-fulfillment");
 const { request, response } = require("express");
 const express=require("express");
+const request1 = require('request');
 const app=express();
+
 
 
 // dialogflow app pr post ki request bhejegaa
@@ -13,12 +15,14 @@ app.get("/",(req,res)=>{
 
 app.post("/webhook",express.json(),(request,response)=>{          //fulfillment mai bhi url mai /webhook lagana huga 
     const agent=new WebhookClient({request:request,response:response});
+    
     function fallback(agent){
         agent.add("your bot does not understand this");
     }
 
     function welcome(agent){
-        agent.add("welcome to piaic Backend bot !!!");
+        agent.add("Hi Faiz this is your personal home assistant how can I help you");
+        // agent.add("Hi Faiz this is your personal home assistant");
     }
 
     function userDetails(agent){
@@ -27,7 +31,31 @@ app.post("/webhook",express.json(),(request,response)=>{          //fulfillment 
         let user_name=agent.parameters["person"];  
         // jb tk ye doo details nhi ayngi agay hi barayga
         agent.add('welcome to piaic Backend bot to '+user_name+"  from "+user_city);
-        console.log("hello")
+     
+    }
+
+
+    function Home1(agent){
+        let state =agent.parameters["state"]
+        let switchnumber=agent.parameters["number"]
+        agent.add("switch "+switchnumber+" is succesfully turned  "+state)
+        if (state=="Off"){
+            state="OFF"
+        }
+        if (state=="on"){
+            state="ON"
+        }
+        var s = `http://localhost:8030/${state}/${switchnumber}`;
+        var req=request1(s);
+        setTimeout(() => {
+        if (req.response==undefined){
+
+        req.abort()
+        }
+        }, 1000);
+
+        console.log("turned "+ state)
+
     }
 
     function calculation(agent){
@@ -42,9 +70,9 @@ app.post("/webhook",express.json(),(request,response)=>{          //fulfillment 
     intentMap.set("Default Welcome Intent",welcome);
     intentMap.set("userDetails",userDetails);//
     intentMap.set("calculation",calculation);
+    intentMap.set("Home1",Home1);
     agent.handleRequest(intentMap)
 })
-
 
 app.listen(4000,()=>{
     console.log("server is up on 4000")

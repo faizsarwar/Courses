@@ -1,0 +1,10 @@
+/home/faiz/Documents/GitHub/Courses/python/raspberry-pi/home/target/rls/debug/deps/unic_char_range-cd53ba9d0edcdcea.rmeta: /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/lib.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/pkg_info.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/iter.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/range.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/macros.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/step.rs
+
+/home/faiz/Documents/GitHub/Courses/python/raspberry-pi/home/target/rls/debug/deps/unic_char_range-cd53ba9d0edcdcea.d: /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/lib.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/pkg_info.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/iter.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/range.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/macros.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/step.rs
+
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/lib.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/pkg_info.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/iter.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/range.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/macros.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-range-0.7.0/src/step.rs:

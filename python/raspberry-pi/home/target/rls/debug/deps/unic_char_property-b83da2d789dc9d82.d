@@ -1,0 +1,10 @@
+/home/faiz/Documents/GitHub/Courses/python/raspberry-pi/home/target/rls/debug/deps/unic_char_property-b83da2d789dc9d82.rmeta: /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/lib.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/pkg_info.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/property.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/range_types.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/macros.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/tables.rs
+
+/home/faiz/Documents/GitHub/Courses/python/raspberry-pi/home/target/rls/debug/deps/unic_char_property-b83da2d789dc9d82.d: /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/lib.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/pkg_info.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/property.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/range_types.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/macros.rs /home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/tables.rs
+
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/lib.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/pkg_info.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/property.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/range_types.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/macros.rs:
+/home/faiz/.cargo/registry/src/github.com-1ecc6299db9ec823/unic-char-property-0.9.0/src/tables.rs:
