@@ -45,7 +45,7 @@ app.post("/webhook",express.json(),(request,response)=>{          //fulfillment 
         if (state=="on"){
             state="ON"
         }
-        var s = `http://localhost:8030/${state}/${switchnumber}`;
+        var s = `http://0b58f2a9b3c1.ngrok.io/${state}/${switchnumber}`;
         var req=request1(s);
         setTimeout(() => {
         if (req.response==undefined){
