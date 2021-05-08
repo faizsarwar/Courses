@@ -1,1 +1,0 @@
-{"rustc":16329648796341269251,"features":"[\"std\"]","target":15256209674628478340,"profile":11677938664258541388,"path":2375375997031924895,"deps":[[18341199337698084194,"memchr",false,14034929816917555502]],"local":[{"CheckDepInfo":{"dep_info":"debug/.fingerprint/bstr-2e2a4dcafe4ffcc8/dep-lib-bstr"}}],"rustflags":[],"metadata":10235196287122036967,"config":0}
