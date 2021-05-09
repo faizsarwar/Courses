@@ -1,5 +1,3 @@
-
-
 void interrupt_2(){
   delay(1000);
   Serial.println("inerupt is added");

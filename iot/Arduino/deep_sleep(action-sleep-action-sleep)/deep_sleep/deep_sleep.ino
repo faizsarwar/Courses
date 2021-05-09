@@ -1,4 +1,4 @@
-// connect D0 with rst to use deep sleep but not while uploading
+// connect D0 with RST pin to use deep sleep but not while uploading
 void setup()
 {
   pinMode(4, OUTPUT);
