@@ -12,7 +12,7 @@ String clientId = "ESP8266Client-";
  clientId += String(random(0xffff), HEX);
 if (client.connect(clientId.c_str())) {
 Serial.println("connected");
-  client.subscribe("TOPIC");
+  client.subscribe("TOPIC");               //subscribe a topic to turn on led
 } else {
 Serial.print("failed, rc=");
 Serial.print(client.state());

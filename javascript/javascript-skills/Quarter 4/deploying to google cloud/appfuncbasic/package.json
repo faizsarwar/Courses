@@ -1,0 +1,16 @@
+{
+  "name": "appfuncbasic",
+  "scripts": {
+    "test": "echo \"No tests yet...\""
+  },
+  "author": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "actions-on-google": "^2.13.0",
+    "azure-function-express": "^2.0.0",
+    "express": "^4.17.1"
+  }
+}
